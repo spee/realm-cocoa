@@ -31,8 +31,8 @@
 #import "RLMSchema_Private.h"
 #import "RLMUtil.hpp"
 
-#import "results.hpp"
-#import "property.hpp"
+#import <realm/object-store/results.hpp>
+#import <realm/object-store/property.hpp>
 
 #import <objc/runtime.h>
 #import <objc/message.h>
@@ -41,7 +41,7 @@
 
 namespace realm {
 template<>
-Obj ConstObj::get<Obj>(ColKey col) const {
+Obj Obj::get<Obj>(ColKey col) const {
     ObjKey key = get<ObjKey>(col);
     return key ? get_target_table(col)->get_object(key) : Obj();
 }

@@ -26,7 +26,7 @@
 #import "RLMUser_Private.hpp"
 #import "RLMUtil.hpp"
 
-#import "shared_realm.hpp"
+#import <realm/object-store/shared_realm.hpp>
 
 #import "sync/sync_user.hpp"
 

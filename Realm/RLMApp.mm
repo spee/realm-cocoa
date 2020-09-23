@@ -18,13 +18,15 @@
 
 #import "RLMApp_Private.hpp"
 
-#import "RLMCredentials_Private.hpp"
 #import "RLMBSON_Private.hpp"
-#import "RLMPushClient_Private.hpp"
-#import "RLMUser_Private.hpp"
-#import "RLMSyncManager_Private.hpp"
-#import "RLMUtil.hpp"
+#import "RLMCredentials_Private.hpp"
 #import "RLMEmailPasswordAuth.h"
+#import "RLMPushClient_Private.hpp"
+#import "RLMSyncManager_Private.hpp"
+#import "RLMUser_Private.hpp"
+#import "RLMUtil.hpp"
+
+#import <realm/object-store/sync/sync_manager.hpp>
 
 #if !defined(REALM_COCOA_VERSION)
 #import "RLMVersion.h"
@@ -193,7 +195,7 @@ namespace {
 }
 
 - (NSUInteger)defaultRequestTimeoutMS {
-    return _config.default_request_timeout_ms.value_or(6000);
+    return _config.default_request_timeout_ms.value_or(6000U);
 }
 
 - (void)setDefaultRequestTimeoutMS:(NSUInteger)defaultRequestTimeoutMS {

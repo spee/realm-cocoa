@@ -36,7 +36,7 @@
 #import "RLMSyncManager_Private.hpp"
 #import "RLMSyncUtil_Private.h"
 #import "RLMSyncConfiguration_Private.h"
-#import "shared_realm.hpp"
+#import <realm/object-store/shared_realm.hpp>
 #import "RLMWatchTestUtility.h"
 
 #ifndef REALM_ENABLE_SYNC_TESTS

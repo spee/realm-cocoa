@@ -21,7 +21,7 @@
 #import "RLMSyncConfiguration.h"
 #import "RLMSyncUtil_Private.h"
 
-#import "sync/sync_config.hpp"
+#import <realm/sync/config.hpp>
 #import "sync/sync_user.hpp"
 #import "sync/impl/sync_metadata.hpp"
 
