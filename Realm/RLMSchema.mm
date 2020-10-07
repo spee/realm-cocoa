@@ -96,7 +96,7 @@ static RLMObjectSchema *RLMRegisterClass(Class cls) {
     }
 
     if ([cls shouldIncludeInDefaultSchema] && schema.isSwiftClass && schema.properties.count == 0) {
-        @throw RLMException(@"No properties was defined for '%@'. Did you remember to add '@obj' in your model?", schema.className);
+        @throw RLMException(@"No properties are defined for '%@'. Did you remember to mark them with '@obj' in your model?", schema.className);
     }
     return schema;
 }
