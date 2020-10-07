@@ -94,6 +94,7 @@ static RLMObjectSchema *RLMRegisterClass(Class cls) {
     if ([cls shouldIncludeInDefaultSchema] && prevState != SharedSchemaState::Initialized) {
         s_sharedSchema.objectSchemaByName[schema.className] = schema;
     }
+
     return schema;
 }
 
