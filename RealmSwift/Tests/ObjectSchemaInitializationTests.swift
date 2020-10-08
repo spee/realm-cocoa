@@ -209,7 +209,7 @@ class ObjectSchemaInitializationTests: TestCase {
 
 class SwiftFakeObject: Object {
     override class func _realmIgnoreClass() -> Bool { return true }
-    @objc dynamic var requiredProp: String? 
+    @objc dynamic var requiredProp: String?
 }
 
 class SwiftObjectWithNSURL: SwiftFakeObject {
