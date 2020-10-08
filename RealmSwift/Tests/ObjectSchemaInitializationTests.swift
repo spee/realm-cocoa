@@ -116,7 +116,7 @@ class ObjectSchemaInitializationTests: TestCase {
     func testInvalidObjects() {
         // Should be able to get a schema for a non-RLMObjectBase subclass
         let schema = RLMObjectSchema(forObjectClass: SwiftFakeObjectSubclass.self)
-        XCTAssertEqual(schema.properties.count, 1)
+        XCTAssertEqual(schema.properties.count, 2)
 
         assertThrows(RLMObjectSchema(forObjectClass: SwiftObjectWithAnyObject.self),
                      "Should throw when not ignoring a property of a type we can't persist")
