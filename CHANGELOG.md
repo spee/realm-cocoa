@@ -7,7 +7,10 @@ x.y.z Release notes (yyyy-MM-dd)
 * <How to hit and notice issue? what was the impact?> ([#????](https://github.com/realm/realm-cocoa/issues/????), since v?.?.?)
 * None.
 
-<!-- ### Breaking Changes - ONLY INCLUDE FOR NEW MAJOR version -->
+### Breaking Changes
+* Adjust how RealmSwift.Object is defined to add support for Swift Library
+  Evolution mode. This should normally not have any effect, but you may need to
+  add `override` to initializers of object subclasses.
 
 ### Compatibility
 * File format: Generates Realms with format v12 (Reads and upgrades all previous formats)
