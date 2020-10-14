@@ -14,6 +14,11 @@ x.y.z Release notes (yyyy-MM-dd)
 ### Fixed
 * <How to hit and notice issue? what was the impact?> ([#????](https://github.com/realm/realm-cocoa/issues/????), since v?.?.?)
 * Set the precision correctly when serializing doubles in extended json.
+* Reading the `objectTypes` array from a Realm Configuration would not include
+  the embedded object types which were set in the array.
+* Reject loops in embedded objects as part of local schema validation rather
+  than as a server error.
+
 
 This release also contains the following changes from 5.4.7 - 5.5.0
 
